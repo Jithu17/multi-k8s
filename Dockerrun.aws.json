@@ -5,8 +5,32 @@
             "name": "client",
             "image": "jithupauljacob/multi-client",
             "hostname": "client",
+            "essential": false 
+        },
+        {
+            "name": "server",
+            "image": "jithupauljacob/multi-server",
+            "hostname": "api",
             "essential": false
-            
+        },
+        {
+            "name": "worker",
+            "image": "jithupauljacob/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "jithupauljacob/multi-nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links":["client", "server"]
         }
-    ]
+    ] 
 }
