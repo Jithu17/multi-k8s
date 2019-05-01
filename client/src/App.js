@@ -19,7 +19,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Docker with Travis CI
+          Learn Docker with Travis CI Fib Calculator
         </a>
         <Link to="/">Home</Link>
         <Link to="/otherpage">Other Page</Link>
