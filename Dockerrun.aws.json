@@ -4,7 +4,9 @@
         {
             "name": "client",
             "image": "jithupauljacob/multi-client",
-            "hostname": "client"
+            "hostname": "client",
+            "essential": false
+            
         }
     ]
 }
