@@ -15,10 +15,10 @@ before_install:
   - gcloud config set compute/zone australia-southeast1-a
   - gcloud container clusters get-credentials multi-k8s
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t jithupauljacob/react-test -f ./client/Dockerfile.dev ./client
+  - echo "Testing Docker Hub credentials"
 
 script: 
-  - docker run jithupauljacob/react-test npm test -- --coverage
+  - docker ps -a
 
 deploy:
   provider: script
